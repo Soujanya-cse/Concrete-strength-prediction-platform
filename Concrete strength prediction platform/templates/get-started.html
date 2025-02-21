@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Started</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('features') }}">Features</a></li>
+        <li><a href="{{ url_for('get_started') }}">Get Started</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Form Section -->
+  <section class="form-section">
+    <div class="form-container">
+      <h2>Predict Concrete Strength</h2>
+      <form method="post">
+        <div class="form-group"><label for="cement">Cement:</label><input type="number" name="cement" step="0.01" required></div>
+        <div class="form-group"><label for="blastFurnace">Blast Furnace:</label><input type="number" name="blastFurnace" step="0.01" required></div>
+        <div class="form-group"><label for="flyAsh">Fly Ash:</label><input type="number" name="flyAsh" step="0.01" required></div>
+        <div class="form-group"><label for="water">Water:</label><input type="number" name="water" step="0.01" required></div>
+        <div class="form-group"><label for="superplasticizer">Superplasticizer:</label><input type="number" name="superplasticizer" step="0.01" required></div>
+        <div class="form-group"><label for="courseAggregate">Coarse Aggregate:</label><input type="number" name="courseAggregate" step="0.01" required></div>
+        <div class="form-group"><label for="fineaggregate">Fine Aggregate:</label><input type="number" name="fineaggregate" step="0.01" required></div>
+        <div class="form-group"><label for="age">Age:</label><input type="number" name="age" step="0.01" required></div>
+        <button type="submit">Predict</button>
+      </form>
+
+      <!-- Display Result -->
+      {% if predicted_strength %}
+        <div id="result">
+          <h3>Predicted Concrete Strength: {{ predicted_strength }}</h3>
+          <h4>Category: {{ strength_category }}</h4>
+          <p>{{ advice }}</p>
+        </div>
+      {% elif error %}
+        <div id="error">
+          <h3>An error occurred:</h3>
+          <p>{{ error }}</p>
+        </div>
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Concrete Strength Predictor. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

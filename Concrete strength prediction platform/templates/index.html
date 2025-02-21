@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concrete Strength Predictor</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('features') }}">Features</a></li>
+        <li><a href="{{ url_for('get_started') }}">Get Started</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section id="home" class="banner">
+    <div class="banner-content">
+      <div class="banner-image"><img src="https://i.pinimg.com/474x/53/0b/68/530b68e29a63c209319ad7f56ce6c4c9.jpg" alt="Concrete Strength">
+      </div>
+
+  
+    <div class="banner-text">
+      <h1>Welcome to <span class="highlight">Concrete Strength Predictor</span></h1>
+      <p>Revolutionize your construction journey with AI-driven precision.</p>
+      <button onclick="window.location.href='/get-started'">Get Started</button>
+    </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Concrete Strength Predictor. All rights reserved.</p>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#privacy">Privacy Policy</a></li>
+        <li><a href="#terms">Terms of Service</a></li>
+      </ul>
+
+    </div>
+  </footer>
+</body>
+</html>

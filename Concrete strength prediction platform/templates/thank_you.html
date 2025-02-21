@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 1.2em;
+            text-align: center;
+            margin: 20px;
+        }
+
+        a {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        a:hover {
+            background-color: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+        }
+
+        head{
+            text-align: center;
+            display: flex;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1 class="head">Thank You, Soujanya!</h1>
+    </header>
+    
+    <p>Your message has been sent. We will get back to you shortly.</p>
+    <a href="{{ url_for('home') }}">Back to Home</a>
+
+    <footer>
+        <p>&copy; 2024 Concrete Strength Predictor. All rights reserved.</p>
+    </footer>
+</body>
+</html>

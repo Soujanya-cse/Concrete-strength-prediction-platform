@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Features</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  
+</head>
+<body>
+  <!-- Navigation -->
+  <header>
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('features') }}">Features</a></li>
+            <li><a href="{{ url_for('building_renewable') }}">Building with Renewable Resources</a></li>
+            <li><a href="{{ url_for('strengthening_construction') }}">Strengthening Construction</a></li>
+            <li><a href="{{ url_for('custom_inputs') }}">Custom Inputs</a></li>
+            <li><a href="{{ url_for('get_started') }}">Get Started</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact Us</a></li>
+          </ul>
+    </nav>
+  </header>
+
+  <!-- Features Section -->
+  <section class="options">
+    <div class="option">
+      <a href="{{ url_for('building_renewable') }}">
+        <img src="https://i.pinimg.com/474x/98/86/61/98866167f2e2a96e332209f71886fb55.jpg" alt="Renewable Resources">
+      </a>
+      <h3>Building with Renewable Resources</h3>
+      <p>Discover eco-friendly materials and methods.</p>
+    </div>
+    <div class="option">
+      <a href="{{ url_for('strengthening_construction') }}">
+        <img src="https://i.pinimg.com/474x/09/63/f5/0963f5f61f42562f92cbb15dc39e66da.jpg" alt="Construction Essentials">
+      </a>
+      <h3>Strengthening Construction</h3>
+      <p>Learn the key factors for durable buildings.</p>
+    </div>
+    <div class="option">
+      <a href="{{ url_for('custom_inputs') }}">
+        <img src="https://i.pinimg.com/474x/84/a7/df/84a7df1ebf71cc4bb2b674ac5cd694de.jpg" alt="Custom Inputs">
+      </a>
+      <h3>Custom Inputs</h3>
+      <p>Input your specifications for tailored predictions.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2024 Concrete Strength Predictor. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
